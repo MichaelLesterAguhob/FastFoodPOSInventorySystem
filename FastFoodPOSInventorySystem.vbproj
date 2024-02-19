@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9340C710-7824-4F08-8429-864B5B705964}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FastFoodPOSInventorySystem.My.MyApplication</StartupObject>
+    <RootNamespace>FastFoodPOSInventorySystem</RootNamespace>
+    <AssemblyName>FastFoodPOSInventorySystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FastFoodPOSInventorySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FastFoodPOSInventorySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.DurableInstancing" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.AddIn.Contract" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Data.Services.Design" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Diagnostics.Tracing" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Dynamic" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.WorkflowServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInformation.Designer.vb">
+      <DependentUpon>AccountInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="connection.vb" />
+    <Compile Include="createAccount.Designer.vb">
+      <DependentUpon>createAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="createAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Developer.Designer.vb">
+      <DependentUpon>Developer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFPOSIS.Designer.vb">
+      <DependentUpon>FFPOSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FFPOSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryForm.Designer.vb">
+      <DependentUpon>InventoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadingAnimation.Designer.vb">
+      <DependentUpon>loadingAnimation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loadingAnimation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginAccount.Designer.vb">
+      <DependentUpon>loginAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modify_Food_Menu.Designer.vb">
+      <DependentUpon>Modify_Food_Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modify_Food_Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="myAccount.Designer.vb">
+      <DependentUpon>myAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="myAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operationRecord.Designer.vb">
+      <DependentUpon>operationRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="operationRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublicVariables.vb" />
+    <Compile Include="Reports.Designer.vb">
+      <DependentUpon>Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesRecord.Designer.vb">
+      <DependentUpon>SalesRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionsRecords.Designer.vb">
+      <DependentUpon>TransactionsRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountInformation.resx">
+      <DependentUpon>AccountInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createAccount.resx">
+      <DependentUpon>createAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer.resx">
+      <DependentUpon>Developer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFPOSIS.resx">
+      <DependentUpon>FFPOSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryForm.resx">
+      <DependentUpon>InventoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadingAnimation.resx">
+      <DependentUpon>loadingAnimation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginAccount.resx">
+      <DependentUpon>loginAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify_Food_Menu.resx">
+      <DependentUpon>Modify_Food_Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myAccount.resx">
+      <DependentUpon>myAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operationRecord.resx">
+      <DependentUpon>operationRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesRecord.resx">
+      <DependentUpon>SalesRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionsRecords.resx">
+      <DependentUpon>TransactionsRecords.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-male--v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transIcon25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dateIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-skin-type-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dateIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filterIcn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refund-69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchase-order-69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-order-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-1-day-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-end-button-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-squared-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-peso-symbol-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-broom-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-empty-trash-51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-confirm-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1p.6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-order-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-burger-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pizza-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dessert-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-milkshake-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-french-fries-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-slider-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-squared-menu-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-food-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refund-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-order-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-arrow-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-time-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-today-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-start-57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-summary-list-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-peso-symbol-34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-enter-key-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-enter-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-business-report-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-total-sales-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-business-report-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transaction-approved-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-meal-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-inventory-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-developer-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paint-palette-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-help-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-30 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-analyze-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-details-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-today-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-all-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-analyze-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-business-report-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-performance-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-account-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-more-info-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-small-business-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-password-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-broom-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-up-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-enter-43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-30.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
